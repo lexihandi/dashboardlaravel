@@ -1,12 +1,13 @@
 @extends('layout.v_template')
 @section('title', 'Data Gejala')
 @section('content')
+    <tr><a href="/gejala/tambah" class="btn btn-primary btn-md mb-4">Tambah</a></tr>
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>No</th>
                 <th>Nama Gejala</th>
-                <th>Action</th>
+                <th width="250">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -16,7 +17,6 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $data->nama_gejala }}</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-success">Detail</a>
                         <a href="" class="btn btn-sm btn-warning">Edit</a>
                         <a href="" class="btn btn-sm btn-danger">Delete</a>
                     </td>

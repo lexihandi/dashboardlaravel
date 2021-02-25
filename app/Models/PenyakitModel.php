@@ -12,4 +12,9 @@ class PenyakitModel extends Model
     {
         return DB::table('tbl_penyakit')->get();
     }
+
+    public function detail($id_penyakit)
+    {
+        return DB::table('tbl_penyakit')->where('id_penyakit', $id_penyakit)->first();
+    }
 }
