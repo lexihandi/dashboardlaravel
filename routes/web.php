@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GejalaController;
+use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\RelasiController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/gejala', [GejalaController::class, 'index']);
+Route::get('/penyakit', [PenyakitController::class, 'index']);
+Route::get('/relasi', [RelasiController::class, 'index']);
+Route::get('/user', [UserController::class, 'index']);
