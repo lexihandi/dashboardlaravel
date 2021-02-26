@@ -59,5 +59,15 @@ class PenyakitController extends Controller
                 'solusi_penyakit.min' => 'Solusi penyakit minimal 4 huruf'
             ]
         );
+
+        $data =
+            [
+                'nama_penyakit' => Request()->nama_penyakit,
+                'deskripsi_penyakit' => Request()->deskripsi_penyakit,
+                'solusi_penyakit' => Request()->solusi_penyakit,
+            ];
+
+        $this->PenyakitModel->addData($data);
+        return redirect()->route('penyakit')->with('pesan', 'Data penyakit berhasil disimpan');
     }
 }

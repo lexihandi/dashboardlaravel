@@ -1,7 +1,14 @@
 @extends('layout.v_template')
 @section('title', 'Data Penyakit')
 @section('content')
-    <tr><a href="/penyakit/tambah" class="btn btn-primary btn-md mb-4">Tambah</a></tr>
+    @if (session('pesan'))
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-check"></i> Sukses!</h5>
+            {{ session('pesan') }}.
+        </div>
+    @endif
+    <a href="/penyakit/tambah" class="btn btn-primary btn-md mb-4">Tambah</a>
     <table class="table table-bordered">
         <thead>
             <tr>

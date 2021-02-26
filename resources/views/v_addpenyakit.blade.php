@@ -38,6 +38,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-md">Simpan</button>
+                        <a href="/penyakit" class="btn btn-danger btn-md">Batal</a>
                     </div>
                 </div>
             </div>

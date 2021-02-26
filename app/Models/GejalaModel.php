@@ -12,4 +12,9 @@ class GejalaModel extends Model
     {
         return DB::table('tbl_gejala')->get();
     }
+
+    public function addData($data)
+    {
+        DB::table('tbl_gejala')->insert($data);
+    }
 }

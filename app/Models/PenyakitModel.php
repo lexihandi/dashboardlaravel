@@ -17,4 +17,9 @@ class PenyakitModel extends Model
     {
         return DB::table('tbl_penyakit')->where('id_penyakit', $id_penyakit)->first();
     }
+
+    public function addData($data)
+    {
+        DB::table('tbl_penyakit')->insert($data);
+    }
 }

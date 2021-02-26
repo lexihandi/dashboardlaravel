@@ -37,5 +37,13 @@ class GejalaController extends Controller
                 'nama_gejala.min' => 'Nama gejala kurang dari 4 huruf'
             ]
         );
+
+        $data =
+            [
+                'nama_gejala' => Request()->nama_gejala,
+            ];
+
+        $this->GejalaModel->addData($data);
+        return redirect()->route('gejala')->with('pesan', 'Data gejala berhasil disimpan');
     }
 }
