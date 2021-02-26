@@ -22,4 +22,9 @@ class PenyakitModel extends Model
     {
         DB::table('tbl_penyakit')->insert($data);
     }
+
+    public function editData($id_penyakit, $data)
+    {
+        DB::table('tbl_penyakit')->where('id_penyakit', $id_penyakit)->update($data);
+    }
 }

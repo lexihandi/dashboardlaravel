@@ -24,7 +24,7 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $data->nama_gejala }}</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="/gejala/edit/{{ $data->id_gejala }}" class="btn btn-sm btn-warning">Edit</a>
                         <a href="" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>
