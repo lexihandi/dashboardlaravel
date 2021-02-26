@@ -115,4 +115,10 @@ class PenyakitController extends Controller
         $this->PenyakitModel->editData($id_penyakit, $data);
         return redirect()->route('penyakit')->with('pesan', 'Data penyakit berhasil diperbaharui');
     }
+
+    public function delete($id_penyakit)
+    {
+        $this->PenyakitModel->deleteData($id_penyakit);
+        return redirect()->route('penyakit')->with('pesan', 'Data penyakit berhasil dihapus');
+    }
 }

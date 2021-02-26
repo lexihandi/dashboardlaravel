@@ -25,6 +25,7 @@ Route::get('/gejala/tambah', [GejalaController::class, 'add']);
 Route::post('/gejala/tambahdata', [GejalaController::class, 'insert']);
 Route::get('/gejala/edit/{id_gejala}', [GejalaController::class, 'edit']);
 Route::post('/gejala/update/{id_gejala}', [GejalaController::class, 'update']);
+Route::get('/gejala/delete/{id_gejala}', [GejalaController::class, 'delete']);
 
 Route::get('/penyakit', [PenyakitController::class, 'index'])->name('penyakit');
 Route::get('/penyakit/tambah', [PenyakitController::class, 'add']);
@@ -32,6 +33,7 @@ Route::post('/penyakit/tambahdata', [PenyakitController::class, 'insert']);
 Route::get('/penyakit/detail/{id_penyakit}', [PenyakitController::class, 'detail']);
 Route::get('/penyakit/edit/{id_penyakit}', [PenyakitController::class, 'edit']);
 Route::post('/penyakit/update/{id_penyakit}', [PenyakitController::class, 'update']);
+Route::get('/penyakit/delete/{id_penyakit}', [PenyakitController::class, 'delete']);
 
 Route::get('/relasi', [RelasiController::class, 'index']);
 

@@ -27,4 +27,9 @@ class GejalaModel extends Model
     {
         DB::table('tbl_gejala')->where('id_gejala', $id_gejala)->update($data);
     }
+
+    public function deleteData($id_gejala)
+    {
+        DB::table('tbl_gejala')->where('id_gejala', $id_gejala)->delete();
+    }
 }

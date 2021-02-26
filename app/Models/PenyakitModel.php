@@ -27,4 +27,9 @@ class PenyakitModel extends Model
     {
         DB::table('tbl_penyakit')->where('id_penyakit', $id_penyakit)->update($data);
     }
+
+    public function deleteData($id_penyakit)
+    {
+        DB::table('tbl_penyakit')->where('id_penyakit', $id_penyakit)->delete();
+    }
 }

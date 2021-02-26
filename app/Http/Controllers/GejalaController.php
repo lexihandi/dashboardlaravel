@@ -91,4 +91,10 @@ class GejalaController extends Controller
         $this->GejalaModel->editData($id_gejala, $data);
         return redirect()->route('gejala')->with('pesan', 'Data gejala berhasil diperbaharui');
     }
+
+    public function delete($id_gejala)
+    {
+        $this->GejalaModel->deleteData($id_gejala);
+        return redirect()->route('gejala')->with('pesan', 'Data gejala berhasil dihapus');
+    }
 }
