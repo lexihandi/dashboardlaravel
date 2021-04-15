@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('tbl_gejala', 'GejalaModelController@index');
+Route::post('tbl_gejala', 'GejalaModelController@addData');
+Route::put('/tbl_gejala/{id_gejala}', 'GejalaModelController@updateData');
+Route::delete('/tbl_gejala/{id_gejala}', 'GejalaModelController@deleteData');
